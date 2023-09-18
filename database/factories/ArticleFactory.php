@@ -22,11 +22,10 @@ class ArticleFactory extends Factory
         $user_id = User::query()->inRandomOrder()->value('id');
 
         return [
-            //
             'user_id' => $user_id,
             'title' => $title,
             'slug' => Str::slug($title),
-            'text' => fake()->text
+            'text' => fake()->text()
         ];
     }
 }
